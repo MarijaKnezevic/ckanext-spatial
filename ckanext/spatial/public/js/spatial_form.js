@@ -53,7 +53,7 @@ this.ckan.module('spatial-form', function (jQuery, _) {
         },
         styles: {
           point:{
-            iconUrl: '/js/vendor/leaflet/images/marker-icon.png',
+            iconUrl: '/js/vendor/leaflet/1.9.3/images/marker-icon.png',
             iconSize: [14, 25],
             iconAnchor: [7, 25]
           },
@@ -204,9 +204,9 @@ this.ckan.module('spatial-form', function (jQuery, _) {
           });
   
           map.on('draw:deletestop', function(e){
+              drawnItems.clearLayers()
               featureGroupToInput(drawnItems, this.input);
           });
-  
       }
     }
   });
