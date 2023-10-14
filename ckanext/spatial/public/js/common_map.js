@@ -77,10 +77,10 @@
           baseLayer = new L.TileLayer.WMS(baseLayerUrl, wmsOptions);
 
       } else {
-          // Default to Openstreetmap's Standard tile layer
-          baseLayerUrl = 'https://tile.openstreetmap.org/${z}/${x}/${y}.png';
+          // Default to Stamen base map
+          baseLayerUrl = 'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png';
           leafletBaseLayerOptions.subdomains = mapConfig.subdomains || 'abcd';
-          leafletBaseLayerOptions.attribution = mapConfig.attribution || 'Map tiles by <a href="https://www.openstreetmap.org">openstreetmap</a> (<a href="https://operations.osmfoundation.org/policies/tiles/">Tile Usage Policy</a>).)';
+          leafletBaseLayerOptions.attribution = mapConfig.attribution || 'Map tiles by <a href="http://stamen.com">Stamen Design</a> (<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>). Data by <a href="http://openstreetmap.org">OpenStreetMap</a> (<a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>)';
 
           baseLayer = new L.TileLayer(baseLayerUrl, leafletBaseLayerOptions);
       }
