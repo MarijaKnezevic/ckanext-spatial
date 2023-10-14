@@ -29,6 +29,7 @@
                                     leafletBaseLayerOptions) {
 
       var isHttps = window.location.href.substring(0, 5).toLowerCase() === 'https';
+      var mapConfig = mapConfig || {type: 'stamen'};
       var leafletMapOptions = leafletMapOptions || {};
       var leafletBaseLayerOptions = jQuery.extend(leafletBaseLayerOptions, {
                 maxZoom: 18
